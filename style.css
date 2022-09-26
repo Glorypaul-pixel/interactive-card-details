@@ -1,3 +1,11 @@
+:root {
+  --white: hsl(0, 0%, 100%);
+  --shadow: hsl(0, 9%, 30%);
+  --lightGrayishViolet: hsl(270, 3%, 87%);
+  --darkGrayishViolet: hsl(279, 6%, 55%);
+  --veryDarkViolet: hsl(278, 68%, 11%);
+  --veryDarkVioletBTN: hsl(278, 70%, 25%);
+}
 @import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap");
 
 * {
@@ -13,6 +21,7 @@ body {
   font-weight: 500 !important;
   min-height: 100vh;
   font-family: "Space Grotesk", sans-serif;
+  /* color: #000000; */
 }
 .main {
   display: flex;
@@ -64,7 +73,12 @@ body {
   left: 36%;
   font-size: 1rem;
 }
-
+.back-imag {
+  display: none;
+}
+.imag {
+  display: none;
+}
 .front-view {
   margin-right: 5rem;
   color: #ffffff;
@@ -130,4 +144,67 @@ button {
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+
+@media screen and (max-width: 520px) {
+  .main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    padding-top: 2rem;
+  }
+  body {
+    background-image: url(./images/bg-main-mobile.png);
+    background-size: contain;
+    width: 100vh;
+    margin: 0 auto;
+  }
+  .imge img {
+    display: none;
+  }
+  .back-view img {
+    display: none;
+  }
+  .main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+  }
+  .card-logo {
+    position: absolute;
+    top: 7.6rem;
+    left: 5rem;
+    /* width: 100%; */
+  }
+  .imag {
+    display: block;
+    margin: 0 auto;
+    position: absolute;
+    margin-right: 3rem;
+    position: absolute;
+    top: 1rem;
+    left: 2rem;
+  }
+  .imag img {
+    margin: 0 auto;
+    width: 18rem;
+    margin-right: 3rem;
+    position: absolute;
+    top: 7rem;
+    left: -1rem;
+  }
+
+  .back-imag {
+    display: block;
+  }
+  .back-imag img {
+    /* margin: 0 auto; */
+    width: 18rem;
+    position: absolute;
+    right: 4rem;
+  }
 }

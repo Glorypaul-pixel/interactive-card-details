@@ -18,7 +18,16 @@
     <div class="main">
       <div class="card-image">
         <div class="front-view">
-          <img src="./images/bg-card-front.png" alt="#" />
+          <div margin-right: 3rem;
+          position: absolute;
+          top: 7.6rem;
+          left: 2rem; class="back-imag">
+            <img src="./images/bg-card-back.png" alt="#" />
+          </div>
+          <div class="imge">
+            <img src="./images/bg-card-front.png" alt="#" />
+          </div>
+
           <div class="card-logo">
             <img src="./images/card-logo.svg" alt="" />
           </div>
@@ -27,6 +36,9 @@
             <h3>FELICIA LEIRE</h3>
             <h4>09/26</h4>
           </div>
+        </div>
+        <div class="imag">
+          <img src="./images/bg-card-front.png" alt="#" />
         </div>
         <div class="back-view">
           <img src="./images/bg-card-back.png" alt="#" />
@@ -69,7 +81,7 @@
             </div>
           </div>
 
-          <button type="button">Confirm</button>
+          <button type="submit" class="submit">Confirm</button>
         </form>
         <div class="text">
           <img src="./images/icon-complete.svg" alt="#" />
@@ -85,5 +97,21 @@
       <a href="#" target="_blank">Frontend Mentor</a>
       Coded by <a href="#">Your Name Here</a>
     </div>
+    <script>
+      let thankYou = document.querySelector(".text");
+      let form = document.querySelector(".details");
+      let submit = document.querySelector(".submit");
+      submit.addEventListener("click", removeForm)
+      function removeForm(){
+     form.style.display = "none" 
+     thankYou.style.display = "block"
+ }    
+ let confirm = document.querySelector(".submit-btn");
+     confirm.addEventListener("click", removeThankYou)
+     function removeThankYou(){
+     form.style.display = "block" 
+     thankYou.style.display = "none"
+ }    
+ </script>
   </body>
 </html>
